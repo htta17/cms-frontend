@@ -8,5 +8,5 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.scss'
 })
 export class App {
-  protected readonly title = signal('cms-frontend');
+  protected readonly title = signal('Family CMS'); 
 }
