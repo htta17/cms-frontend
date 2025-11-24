@@ -1,0 +1,40 @@
+<header class="main-menu">
+  <p-megamenu [model]="items" />
+</header>
+
+<div class="admin-container">
+  
+  <!-- LEFT SIDEBAR -->
+  <div class="sidebar" [class.collapsed]="isCollapsed">
+    <div class="sidebar-header">
+      <span [hidden]="isCollapsed">Admin Menu</span>
+      <button (click)="toggleSidebar()" class="toggle-btn">
+        <i class="pi" ></i>
+      </button>
+    </div>
+
+    <ul class="sidebar-menu">
+      <li routerLink="/admin/dashboard" routerLinkActive="active">
+        <i class="pi pi-home"></i>
+        <span [hidden]="isCollapsed">Dashboard</span>
+      </li>
+
+      <li routerLink="/admin/users" routerLinkActive="active">
+        <i class="pi pi-users"></i>
+        <span [hidden]="isCollapsed">Users</span>
+      </li>
+
+      <li routerLink="/admin/products" routerLinkActive="active">
+        <i class="pi pi-box"></i>
+        <span [hidden]="isCollapsed">Products</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="content" [class.shifted]="isCollapsed">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+

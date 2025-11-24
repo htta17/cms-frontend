@@ -1,12 +1,12 @@
 import { Routes } from '@angular/router';
+import { AdminLayout } from './admin/admin-layout/admin-layout';
 export const routes: Routes = [
   { path: '', loadComponent: () => import('./home/home').then(m => m.Home) },
   
   // Admin route
   {
     path: 'admin',
-    loadComponent: () =>
-      import('./admin/dashboard/dashboard').then(m => m.Dashboard), 
+    component: AdminLayout,        
     children: [
         {
           path: 'dashboard',
