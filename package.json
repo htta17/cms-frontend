@@ -2,7 +2,7 @@
   "name": "cms-frontend",
   "version": "0.0.0",
   "scripts": {
-    "postinstall": "npm install --force",
+    "postinstall": "npm install --legacy-peer-deps",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
