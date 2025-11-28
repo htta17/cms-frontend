@@ -1,1 +1,14 @@
-<p>layout-add works!</p>
+<h1>Add New Layout</h1>
+
+<div class="layout-form">
+  <label for="layoutName">Layout Name:</label>
+  <input id="layoutName" type="text" />
+
+  <label for="layoutDescription">Description:</label>
+  <textarea id="layoutDescription"></textarea>
+
+  <button class="save-btn">Save Layout</button>
+</div>
+
+<app-layout-preview [numOfColumns]="numOfColumn">    
+</app-layout-preview>

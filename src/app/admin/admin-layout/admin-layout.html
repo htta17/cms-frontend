@@ -7,10 +7,7 @@
   <!-- LEFT SIDEBAR -->
   <div class="sidebar" [class.collapsed]="isCollapsed">
     <div class="sidebar-header">
-      <span [hidden]="isCollapsed">Admin Menu</span>
-      <button (click)="toggleSidebar()" class="toggle-btn">
-        <i class="pi" ></i>
-      </button>
+      <span [hidden]="isCollapsed">Admin Menu</span>      
     </div>
 
     <ul class="sidebar-menu">
@@ -29,6 +26,10 @@
         <span [hidden]="isCollapsed">Products</span>
       </li>
     </ul>
+
+    <button (click)="toggleSidebar()" class="toggle-btn">
+        <i class="pi">{{ isCollapsed ? ">>" : "<<"}}</i>
+    </button>
   </div>
 
   <!-- MAIN CONTENT -->
