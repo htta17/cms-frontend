@@ -1,3 +1,12 @@
-<div class="layout-preview">
-
+<div #container class="layout-preview">
+  <p-table [value]="[]" showGridlines 
+    [resizableColumns]="true" (onColResize)="onColumnResize($event)">
+        <ng-template #header>
+            <tr>
+                <th pResizableColumn>Column 1</th>
+                <th pResizableColumn>Column 2</th>
+                <th pResizableColumn>Column 3</th>                
+            </tr>
+        </ng-template>        
+    </p-table>
 </div>

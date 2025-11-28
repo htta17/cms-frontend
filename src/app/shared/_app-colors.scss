@@ -1,0 +1,45 @@
+// Global Color Palette
+
+// Primary Colors
+$color-primary: #007bff;
+$color-primary-light: #0d6edb;
+$color-primary-dark: #0a58ca;
+
+// Secondary Colors
+$color-secondary: #6c757d;
+$color-secondary-light: #868e96;
+$color-secondary-dark: #5a6268;
+
+// Status Colors
+$color-success: #198754;
+$color-warning: #ffc107;
+$color-danger: #dc3545;
+$color-info: #0dcaf0;
+
+// Neutral Colors
+$color-white: #ffffff;
+$color-black: #000000;
+$color-light-gray: #f8f9fa;
+$color-medium-gray: #e9ecef;
+$color-dark-gray: #4a4a4a;
+
+// Backgrounds
+$bg-primary: #ffffff;
+$bg-secondary: #f8f9fa;
+$bg-tertiary: #e9ecef;
+
+// Borders
+$border-color: #dee2e6;
+$border-color-dark: $color-dark-gray;
+$border-color-light: #f0f0f0;
+
+// Text Colors
+$text-primary: #212529;
+$text-secondary: #6c757d;
+$text-light: #999999;
+$text-white: #ffffff;
+
+// Layout Preview Specific
+$layout-preview-bg: rgb(221, 245, 245);
+$layout-preview-border: $color-dark-gray;
+$layout-preview-splitter: $color-dark-gray;

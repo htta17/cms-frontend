@@ -1,6 +1,42 @@
+@import '../../../shared/app-colors.scss';
+
 .layout-preview {
     width: 100%;
     min-height: 50px;
-    height: 50%;
-    background-color: rgb(221, 245, 245);
+    height: calc(100% - 185px);
+    position: relative;
+    top: 50px;
+
+    p-table {
+        width: 100%;
+        height: 100%;        
+    }
+
+    ::ng-deep .p-datatable-table-container,
+    ::ng-deep table, 
+    ::ng-deep table thead {
+        height: 100%;
+    }
+
+    ::ng-deep th {
+        text-align: center;
+        vertical-align: top;
+        border-color: $border-color-dark;
+    }
+
+    ::ng-deep td {
+        border-color: $border-color-dark;
+    }
+
+    ::ng-deep .p-datatable .p-resizable-column:last-child > .p-column-resizer {
+        display: none;
+    }
+
+    ::ng-deep .p-column-resizer {
+        background-color: $border-color-dark;
+    }
+
+    * {        
+        background-color: $layout-preview-bg ;
+    }
 }

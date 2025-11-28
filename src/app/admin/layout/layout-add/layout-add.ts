@@ -12,5 +12,5 @@ export class LayoutAdd {
     this.numOfColumn = 3;
   }
 
-  numOfColumn: number;
+  numOfColumn: 1 | 2 | 3;
 }
