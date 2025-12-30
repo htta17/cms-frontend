@@ -1,15 +1,22 @@
 import { Routes } from '@angular/router';
 import { AdminLayout } from './admin/admin-layout/admin-layout';
+import { authGuard } from './core/guard/auth-guard';
 export const routes: Routes = [
   // Default route
   { 
     path: '', loadComponent: () => import('./home/home').then(m => m.Home) 
   },
+  // Login
+  {
+    path: 'login',
+    loadComponent: () => import('./admin/login/login').then(m => m.Login),
+  },
   
   // Admin route
   {
     path: 'admin',
-    component: AdminLayout,        
+    component: AdminLayout,  
+    canActivate: [authGuard],      
     children: [        
         {
           path: 'dashboard',

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { LayoutPreview } from "../layout-preview/layout-preview";
+import { Layout } from '../../../entity/Layout';
 
 @Component({
   selector: 'app-layout-add',
@@ -10,7 +11,7 @@ import { LayoutPreview } from "../layout-preview/layout-preview";
 export class LayoutAdd {
   constructor() {
     this.numOfColumn = 3;
-  }
+  }  
 
   numOfColumn: 1 | 2 | 3;
 }

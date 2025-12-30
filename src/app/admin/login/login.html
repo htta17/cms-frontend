@@ -1,0 +1,21 @@
+<div class="login-wrapper">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="login-form">
+    <h2>Sign in</h2>
+
+    <div class="field">
+      <label>Username</label>
+      <input formControlName="username" autocomplete="username" />
+      <div class="error" *ngIf="form.controls['username'].invalid && form.controls['username'].touched">Required</div>
+    </div>
+
+    <div class="field">
+      <label>Password</label>
+      <input type="password" formControlName="password" autocomplete="current-password" />
+      <div class="error" *ngIf="form.controls['password'].invalid && form.controls['password'].touched">Required</div>
+    </div>
+
+    <div class="error" *ngIf="error">{{ error }}</div>
+
+    <button type="submit">Sign In</button>
+  </form>
+</div>
