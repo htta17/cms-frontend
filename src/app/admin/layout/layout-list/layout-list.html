@@ -1,2 +1,32 @@
-<p>layout-list works!</p>
-<router-outlet/>
+<div class="layout-list">
+	<div class="header">
+		<h2>Layouts</h2>
+		<button (click)="goToNew()">New Layout</button>
+	</div>
+
+	<div *ngIf="loading">Loading…</div>
+
+	<table *ngIf="!loading && layouts.length">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Description</th>
+				<th>Columns</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let l of layouts">
+				<td>{{ l.name }}</td>
+				<td>{{ l.description }}</td>
+				<td>{{ l.numOfColumns }}</td>
+				<td>
+					<button (click)="edit(l.id)">Edit</button>
+					<button (click)="delete(l.id)">Delete</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<div *ngIf="!loading && !layouts.length">No layouts found.</div>
+</div>

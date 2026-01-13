@@ -35,8 +35,14 @@ export const routes: Routes = [
         {
             path: 'layouts',
             loadComponent: () => import('./admin/layout/layout-list/layout-list').then(m => m.LayoutList)            
-        }
+        },
         /* end of Layouts */
+
+        /** Users */
+        {
+          path: 'users',
+          loadComponent: () => import('./admin/users/user-list/user-list').then(m => m.UserList)
+        }
 
     ]
   }, 
